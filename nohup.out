@@ -1,0 +1,232 @@
+[W 17:15:35.798 NotebookApp] Error loading server extension jupyter_nbextensions_configurator
+    Traceback (most recent call last):
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/notebookapp.py", line 2026, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyter_nbextensions_configurator'
+[I 2023-01-15 17:15:36.415 LabApp] JupyterLab extension loaded from /Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/jupyterlab
+[I 2023-01-15 17:15:36.415 LabApp] JupyterLab application directory is /Users/boajang/miniforge3/envs/ml/share/jupyter/lab
+[I 17:15:36.420 NotebookApp] Serving notebooks from local directory: /Users/boajang/Penny/Project/00-Competition
+[I 17:15:36.420 NotebookApp] Jupyter Notebook 6.5.2 is running at:
+[I 17:15:36.420 NotebookApp] http://localhost:8888/?token=aef48e61c2dd81b1eba1dfdb7a369ea2b273ee99d4a44d6e
+[I 17:15:36.421 NotebookApp]  or http://127.0.0.1:8888/?token=aef48e61c2dd81b1eba1dfdb7a369ea2b273ee99d4a44d6e
+[I 17:15:36.421 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 17:15:36.425 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///Users/boajang/Library/Jupyter/runtime/nbserver-24413-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=aef48e61c2dd81b1eba1dfdb7a369ea2b273ee99d4a44d6e
+     or http://127.0.0.1:8888/?token=aef48e61c2dd81b1eba1dfdb7a369ea2b273ee99d4a44d6e
+Unable to load extension: pydevd_plugins.extensions.types.pydevd_plugin_pandas_types
+[W 17:15:49.414 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20230115171535 (::1) 25.230000ms referer=http://localhost:8888/tree
+[W 17:15:49.422 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20230115171535 (::1) 6.210000ms referer=http://localhost:8888/tree
+[E 17:15:56.107 NotebookApp] Uncaught exception GET /notebooks/00-Kaggle_Titanic-EDA.ipynb (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/notebooks/00-Kaggle_Titanic-EDA.ipynb', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/gen.py", line 782, in run
+        yielded = self.gen.send(value)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 94, in get
+        self.write(self.render_template('notebook.html',
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/base/handlers.py", line 511, in render_template
+        return template.render(**ns)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+        self.environment.handle_exception()
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/templates/page.html", line 166, in top-level template code
+        {% block header %}
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 23, in get_frontend_exporters
+        from nbconvert.exporters.base import get_export_names, get_exporter
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/__init__.py", line 3, in <module>
+        from . import filters, postprocessors, preprocessors, writers
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/__init__.py", line 8, in <module>
+        from .markdown import *
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown.py", line 13, in <module>
+        from .markdown_mistune import markdown2html_mistune
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown_mistune.py", line 37, in <module>
+        class MathBlockGrammar(mistune.BlockGrammar):
+    AttributeError: module 'mistune' has no attribute 'BlockGrammar'
+[E 17:15:56.113 NotebookApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Referer": "http://localhost:8888/tree",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
+    }
+[E 17:15:56.113 NotebookApp] 500 GET /notebooks/00-Kaggle_Titanic-EDA.ipynb (::1) 266.340000ms referer=http://localhost:8888/tree
+[E 17:16:14.030 NotebookApp] Uncaught exception GET /notebooks/00-Kaggle_Titanic-EDA.ipynb (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/notebooks/00-Kaggle_Titanic-EDA.ipynb', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 1713, in _execute
+        result = await result
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/gen.py", line 782, in run
+        yielded = self.gen.send(value)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 94, in get
+        self.write(self.render_template('notebook.html',
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/base/handlers.py", line 511, in render_template
+        return template.render(**ns)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+        self.environment.handle_exception()
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/templates/page.html", line 166, in top-level template code
+        {% block header %}
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 23, in get_frontend_exporters
+        from nbconvert.exporters.base import get_export_names, get_exporter
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/__init__.py", line 3, in <module>
+        from . import filters, postprocessors, preprocessors, writers
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/__init__.py", line 8, in <module>
+        from .markdown import *
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown.py", line 13, in <module>
+        from .markdown_mistune import markdown2html_mistune
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown_mistune.py", line 37, in <module>
+        class MathBlockGrammar(mistune.BlockGrammar):
+    AttributeError: module 'mistune' has no attribute 'BlockGrammar'
+[E 17:16:14.035 NotebookApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Referer": "http://localhost:8888/tree",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
+    }
+[E 17:16:14.035 NotebookApp] 500 GET /notebooks/00-Kaggle_Titanic-EDA.ipynb (::1) 12.550000ms referer=http://localhost:8888/tree
+[W 2023-01-15 17:16:25.293 LabApp] Could not determine jupyterlab build status without nodejs
+[E 17:16:25.522 NotebookApp] Uncaught exception GET /api/nbconvert?1673770585467 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1673770585467', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 1711, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 3208, in wrapper
+        return method(self, *args, **kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/services/nbconvert/handlers.py", line 14, in get
+        from nbconvert.exporters import base
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/__init__.py", line 3, in <module>
+        from . import filters, postprocessors, preprocessors, writers
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/__init__.py", line 8, in <module>
+        from .markdown import *
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown.py", line 13, in <module>
+        from .markdown_mistune import markdown2html_mistune
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown_mistune.py", line 37, in <module>
+        class MathBlockGrammar(mistune.BlockGrammar):
+    AttributeError: module 'mistune' has no attribute 'BlockGrammar'
+[W 17:16:25.523 NotebookApp] Unhandled error
+[E 17:16:25.524 NotebookApp] {
+      "Host": "localhost:8888",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8888/lab",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
+    }
+[E 17:16:25.524 NotebookApp] 500 GET /api/nbconvert?1673770585467 (::1) 4.850000ms referer=http://localhost:8888/lab
+[E 17:16:25.525 NotebookApp] Uncaught exception GET /api/nbconvert?1673770585474 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1673770585474', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 1711, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 3208, in wrapper
+        return method(self, *args, **kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/services/nbconvert/handlers.py", line 14, in get
+        from nbconvert.exporters import base
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/__init__.py", line 3, in <module>
+        from . import filters, postprocessors, preprocessors, writers
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/__init__.py", line 8, in <module>
+        from .markdown import *
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown.py", line 13, in <module>
+        from .markdown_mistune import markdown2html_mistune
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown_mistune.py", line 37, in <module>
+        class MathBlockGrammar(mistune.BlockGrammar):
+    AttributeError: module 'mistune' has no attribute 'BlockGrammar'
+[W 17:16:25.525 NotebookApp] Unhandled error
+[E 17:16:25.526 NotebookApp] {
+      "Host": "localhost:8888",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8888/lab",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
+    }
+[E 17:16:25.526 NotebookApp] 500 GET /api/nbconvert?1673770585474 (::1) 6.220000ms referer=http://localhost:8888/lab
+[W 17:16:25.641 NotebookApp] 404 GET /api/contents/00-Competition/00-Kaggle_Titanic-EDA.ipynb?content=0&1673770585636 (::1): file or directory does not exist: '00-Competition/00-Kaggle_Titanic-EDA.ipynb'
+[W 17:16:25.641 NotebookApp] file or directory does not exist: '00-Competition/00-Kaggle_Titanic-EDA.ipynb'
+[W 17:16:25.641 NotebookApp] 404 GET /api/contents/00-Competition/00-Kaggle_Titanic-EDA.ipynb?content=0&1673770585636 (::1) 1.010000ms referer=http://localhost:8888/lab
+[W 17:16:26.431 NotebookApp] 404 GET /api/contents/00-Competition?1673770586424 (::1): file or directory does not exist: '00-Competition'
+[W 17:16:26.431 NotebookApp] file or directory does not exist: '00-Competition'
+[W 17:16:26.432 NotebookApp] 404 GET /api/contents/00-Competition?1673770586424 (::1) 1.600000ms referer=http://localhost:8888/lab
+[I 17:16:31.523 NotebookApp] Kernel started: 4f8e7cfa-074b-4526-985c-26c9ce2d9231, name: ml
+Unable to load extension: pydevd_plugins.extensions.types.pydevd_plugin_pandas_types
+[I 17:18:29.741 NotebookApp] Saving file at /00-Kaggle_Titanic-EDA.ipynb
+[I 17:18:53.831 NotebookApp] 301 GET /static/favicons/favicon.ico (::1) 0.780000ms
+[W 2023-01-15 17:18:55.403 LabApp] Could not determine jupyterlab build status without nodejs
+[E 17:18:55.502 NotebookApp] Uncaught exception GET /api/nbconvert?1673770735497 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1673770735497', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 1711, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 3208, in wrapper
+        return method(self, *args, **kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/services/nbconvert/handlers.py", line 14, in get
+        from nbconvert.exporters import base
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/__init__.py", line 3, in <module>
+        from . import filters, postprocessors, preprocessors, writers
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/__init__.py", line 8, in <module>
+        from .markdown import *
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown.py", line 13, in <module>
+        from .markdown_mistune import markdown2html_mistune
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown_mistune.py", line 37, in <module>
+        class MathBlockGrammar(mistune.BlockGrammar):
+    AttributeError: module 'mistune' has no attribute 'BlockGrammar'
+[W 17:18:55.502 NotebookApp] Unhandled error
+[E 17:18:55.503 NotebookApp] {
+      "Host": "localhost:8888",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8888/lab",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+    }
+[E 17:18:55.503 NotebookApp] 500 GET /api/nbconvert?1673770735497 (::1) 4.010000ms referer=http://localhost:8888/lab
+[E 17:18:55.504 NotebookApp] Uncaught exception GET /api/nbconvert?1673770735499 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/api/nbconvert?1673770735499', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 1711, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/tornado/web.py", line 3208, in wrapper
+        return method(self, *args, **kwargs)
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/notebook/services/nbconvert/handlers.py", line 14, in get
+        from nbconvert.exporters import base
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/__init__.py", line 3, in <module>
+        from . import filters, postprocessors, preprocessors, writers
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/__init__.py", line 8, in <module>
+        from .markdown import *
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown.py", line 13, in <module>
+        from .markdown_mistune import markdown2html_mistune
+      File "/Users/boajang/miniforge3/envs/ml/lib/python3.8/site-packages/nbconvert/filters/markdown_mistune.py", line 37, in <module>
+        class MathBlockGrammar(mistune.BlockGrammar):
+    AttributeError: module 'mistune' has no attribute 'BlockGrammar'
+[W 17:18:55.505 NotebookApp] Unhandled error
+[E 17:18:55.505 NotebookApp] {
+      "Host": "localhost:8888",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8888/lab",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+    }
+[E 17:18:55.505 NotebookApp] 500 GET /api/nbconvert?1673770735499 (::1) 2.040000ms referer=http://localhost:8888/lab
+[I 17:18:56.604 NotebookApp] 301 GET /static/favicons/favicon-busy-1.ico (::1) 1.980000ms
+[I 17:19:54.264 NotebookApp] Kernel restarted: 4f8e7cfa-074b-4526-985c-26c9ce2d9231
+[I 17:19:54.272 NotebookApp] Starting buffering for 4f8e7cfa-074b-4526-985c-26c9ce2d9231:cc134abb-64ba-4257-a61c-dd0e28c65dc8
+[I 17:19:54.277 NotebookApp] Restoring connection for 4f8e7cfa-074b-4526-985c-26c9ce2d9231:cc134abb-64ba-4257-a61c-dd0e28c65dc8
+Unable to load extension: pydevd_plugins.extensions.types.pydevd_plugin_pandas_types
+[I 17:20:16.538 NotebookApp] Saving file at /00-Kaggle_Titanic-EDA.ipynb
+[I 17:22:18.391 NotebookApp] Saving file at /00-Kaggle_Titanic-EDA.ipynb
+[I 21:45:30.257 NotebookApp] Starting buffering for 4f8e7cfa-074b-4526-985c-26c9ce2d9231:cc134abb-64ba-4257-a61c-dd0e28c65dc8
+[C 21:45:42.239 NotebookApp] received signal 15, stopping
+[I 21:45:42.245 NotebookApp] Shutting down 1 kernel
+[I 21:45:42.254 NotebookApp] Kernel shutdown: 4f8e7cfa-074b-4526-985c-26c9ce2d9231
